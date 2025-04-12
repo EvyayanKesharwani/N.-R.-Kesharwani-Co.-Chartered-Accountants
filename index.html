@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>N.R. Kesharwani & Co. | Chartered Accountants</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -13,8 +13,9 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
       color: #004d40;
+      transition: all 0.3s ease-in-out;
     }
     header {
       background: #004d40;
@@ -23,10 +24,10 @@
       justify-content: space-between;
       align-items: center;
       color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      font-size: 28px;
     }
     nav a {
       margin: 0 15px;
@@ -48,15 +49,17 @@
       text-align: center;
       flex-direction: column;
       padding: 0 20px;
+      animation: fadeIn 1.5s ease-in;
     }
-    .hero h2 {
-      font-size: 48px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-    .hero p {
-      font-size: 20px;
-      margin-top: 15px;
-      max-width: 600px;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .sections {
       display: grid;
@@ -69,14 +72,11 @@
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0, 77, 64, 0.15);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h3 {
-      color: #00796b;
-      margin-bottom: 15px;
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 77, 64, 0.25);
     }
     footer {
       background: #004d40;
@@ -106,7 +106,7 @@
   </style>
 </head>
 <body>
-  <header>
+  <header class="sticky-header">
     <h1>N.R. Kesharwani & Co.</h1>
     <nav>
       <a href="#services">Services</a>
@@ -136,33 +136,26 @@
     </div>
   </section>
 
-  <section class="sections" id="about">
-    <div class="card">
-      <h3>About Us</h3>
-      <p>With decades of experience, N.R. Kesharwani & Co. stands tall as a reputed CA firm in India, offering tailored solutions to individuals, businesses, and corporations across various sectors.</p>
-    </div>
-  </section>
-
-  <section class="sections" id="team">
-    <div class="card">
-      <h3>Meet Our Team</h3>
-      <p>Led by CA N.R. Kesharwani, our team includes skilled professionals from taxation, audit, and consulting backgrounds.</p>
-    </div>
-  </section>
-
-  <section class="sections" id="contact">
-    <div class="card">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:nrkesharwani.ca@gmail.com">nrkesharwani.ca@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
-      <p>Address: <a href="https://maps.google.com/?q=Business+Plaza,+Nagpur,+India" target="_blank" rel="noopener noreferrer">1st Floor, Business Plaza, Nagpur, India</a></p>
-    </div>
-  </section>
-
   <a href="https://wa.me/919876543210" class="whatsapp-button" target="_blank" rel="noopener noreferrer">💬</a>
 
   <footer>
     &copy; 2025 N.R. Kesharwani & Co. | Designed with passion 💼 by Triveniram
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        setTimeout(() => {
+          card.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }, index * 200);
+      });
+    });
+  </script>
 </body>
 </html>
