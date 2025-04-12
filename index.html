@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>N.R. Kesharwani & Co. | Chartered Accountants</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y.K. & Co. | Chartered Accountants</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -11,13 +11,15 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #f5f5f5;
-      color: #212121;
+      background: #f7f9fc;
+      color: #1a1a1a;
     }
+
     header {
-      background-color: #004d40;
+      background-color: #003366;
       color: white;
       padding: 20px 40px;
       display: flex;
@@ -27,143 +29,135 @@
       top: 0;
       z-index: 1000;
     }
+
     nav a {
-      color: #b2dfdb;
-      margin: 0 15px;
+      color: #cce7ff;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
     }
+
     nav a:hover {
-      color: #ffffff;
+      color: white;
     }
+
     .hero {
-      background: url('https://images.unsplash.com/photo-1581093588401-40aa4f30e66c?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
       height: 90vh;
+      background: linear-gradient(to right, #00509e, #002f5f);
       color: white;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      flex-direction: column;
       padding: 0 20px;
-      animation: fadeIn 2s ease-in-out;
     }
+
     .hero h1 {
-      font-size: 48px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
+
     .hero p {
-      font-size: 20px;
-      margin-top: 15px;
+      font-size: 1.2rem;
       max-width: 600px;
     }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+
     .section {
-      padding: 60px 40px;
-      background-color: white;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
+
     .section h2 {
       text-align: center;
       margin-bottom: 40px;
-      font-size: 32px;
-      color: #00796b;
+      font-size: 2rem;
+      color: #003366;
     }
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
+
     .card {
-      background: #fafafa;
-      padding: 30px;
+      background: white;
       border-radius: 10px;
-      width: 300px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
+
     .testimonial {
       font-style: italic;
-      text-align: center;
-      margin: 20px 0;
+      color: #444;
     }
+
+    .quote {
+      font-size: 1.5rem;
+      color: #004080;
+      text-align: center;
+      margin-top: 40px;
+    }
+
     footer {
-      background-color: #004d40;
+      background-color: #003366;
       color: white;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>N.R. Kesharwani & Co.</h1>
+    <h1>Y.K. & Co.</h1>
     <nav>
       <a href="#services">Services</a>
-      <a href="#quote">Quote</a>
-      <a href="#testimonials">Testimonials</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Your Trusted Financial Partner</h1>
-    <p>Precision. Integrity. Growth. With decades of experience in accounting, auditing, and taxation, we help your business flourish.</p>
+    <h1>Empowering Your Financial Growth</h1>
+    <p>Professional Chartered Accountancy services tailored to individuals, startups, and corporations. Precision. Integrity. Results.</p>
   </section>
 
   <section class="section" id="services">
     <h2>Our Services</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Tax Planning</h3>
-        <p>We help individuals and businesses optimize their tax strategies to maximize savings and ensure compliance.</p>
-      </div>
-      <div class="card">
-        <h3>Audit & Assurance</h3>
-        <p>Comprehensive auditing services to enhance credibility and identify areas of improvement.</p>
-      </div>
-      <div class="card">
-        <h3>Business Consulting</h3>
-        <p>Guiding startups and enterprises with sound financial advice, budgeting, and strategic decisions.</p>
-      </div>
+    <div class="card">
+      <h3>Taxation & Compliance</h3>
+      <p>Expert tax filing, GST registration, and regulatory compliance services.</p>
+    </div>
+    <div class="card">
+      <h3>Audit & Assurance</h3>
+      <p>Comprehensive audits for businesses and NGOs to ensure transparency and trust.</p>
+    </div>
+    <div class="card">
+      <h3>Business Advisory</h3>
+      <p>Startup guidance, financial planning, and investment strategy consulting.</p>
     </div>
   </section>
 
-  <section class="section" id="quote">
-    <h2>Quote of the Day</h2>
-    <p class="testimonial">"Accounting is the language of business." – Warren Buffett</p>
-  </section>
-
-  <section class="section" id="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">"The professionalism and insight offered by N.R. Kesharwani & Co. has been vital to our company’s growth." – Rajesh S.</div>
-    <div class="testimonial">"Prompt, accurate, and trustworthy. Highly recommended for tax and audit services!" – Sneha M.</div>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <div style="text-align: center;">
-      <p>Email: <a href="mailto:nrkesharwani.ca@gmail.com">nrkesharwani.ca@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
-      <p>Address: 1st Floor, Business Plaza, Nagpur, India</p>
+  <section class="section" id="about">
+    <h2>About Y.K. & Co.</h2>
+    <div class="card">
+      <p>With over 10 years of experience, Y.K. & Co. has been delivering expert financial services with commitment and integrity. We believe in building long-term relationships rooted in trust and results.</p>
     </div>
+  </section>
+
+  <section class="section">
+    <h2>Client Testimonials</h2>
+    <div class="card testimonial">
+      <p>"Y.K. & Co. helped us set up our business and manage our finances with great ease. Highly recommended!" - Arjun S.</p>
+    </div>
+    <div class="card testimonial">
+      <p>"Their audit process is very professional and detail-oriented. We trust them with all our compliance needs." - Meera T.</p>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p>"Accuracy is the twin brother of honesty; inaccuracy is the twin brother of dishonesty." – Nathaniel Hawthorne</p>
   </section>
 
   <footer>
-    &copy; 2025 N.R. Kesharwani & Co. | Designed by Triveniram
+    &copy; 2025 Y.K. & Co. | All rights reserved.
   </footer>
 </body>
 </html>
