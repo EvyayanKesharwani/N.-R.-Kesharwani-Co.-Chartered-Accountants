@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>N.R. Kesharwani & Co. | Chartered Accountants</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -13,43 +13,49 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #ffffff);
-      color: #004d40;
-      transition: all 0.3s ease-in-out;
+      background-color: #f5f5f5;
+      color: #212121;
     }
     header {
-      background: #004d40;
+      background-color: #004d40;
+      color: white;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     nav a {
-      margin: 0 15px;
       color: #b2dfdb;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
     }
     nav a:hover {
-      color: white;
+      color: #ffffff;
     }
     .hero {
+      background: url('https://images.unsplash.com/photo-1581093588401-40aa4f30e66c?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
       height: 90vh;
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('https://images.unsplash.com/photo-1601049542249-7c4d5e3cc383?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
-      color: white;
       text-align: center;
       flex-direction: column;
       padding: 0 20px;
-      animation: fadeIn 1.5s ease-in;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 15px;
+      max-width: 600px;
     }
     @keyframes fadeIn {
       from {
@@ -61,101 +67,103 @@
         transform: translateY(0);
       }
     }
-    .sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
+    .section {
       padding: 60px 40px;
+      background-color: white;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #00796b;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
     }
     .card {
-      background: #ffffff;
+      background: #fafafa;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 77, 64, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 77, 64, 0.25);
+      transform: translateY(-5px);
+    }
+    .testimonial {
+      font-style: italic;
+      text-align: center;
+      margin: 20px 0;
     }
     footer {
-      background: #004d40;
+      background-color: #004d40;
       color: white;
       text-align: center;
       padding: 20px;
       font-size: 14px;
     }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      cursor: pointer;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
-  <header class="sticky-header">
+  <header>
     <h1>N.R. Kesharwani & Co.</h1>
     <nav>
       <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#team">Team</a>
+      <a href="#quote">Quote</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Empowering Your Financial Future</h2>
-    <p>Expert guidance in accounting, auditing, taxation, and compliance. Trust, Accuracy, and Growth with N.R. Kesharwani & Co.</p>
+    <h1>Your Trusted Financial Partner</h1>
+    <p>Precision. Integrity. Growth. With decades of experience in accounting, auditing, and taxation, we help your business flourish.</p>
   </section>
 
-  <section class="sections" id="services">
-    <div class="card">
-      <h3>Taxation & Compliance</h3>
-      <p>Income Tax, GST, Corporate Tax, and regulatory filing handled with precision and expertise.</p>
-    </div>
-    <div class="card">
-      <h3>Audit & Assurance</h3>
-      <p>Comprehensive audits tailored to your business, ensuring transparency and compliance.</p>
-    </div>
-    <div class="card">
-      <h3>Business Advisory</h3>
-      <p>Start-up guidance, financial planning, and investment consultancy to fuel business growth.</p>
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Tax Planning</h3>
+        <p>We help individuals and businesses optimize their tax strategies to maximize savings and ensure compliance.</p>
+      </div>
+      <div class="card">
+        <h3>Audit & Assurance</h3>
+        <p>Comprehensive auditing services to enhance credibility and identify areas of improvement.</p>
+      </div>
+      <div class="card">
+        <h3>Business Consulting</h3>
+        <p>Guiding startups and enterprises with sound financial advice, budgeting, and strategic decisions.</p>
+      </div>
     </div>
   </section>
 
-  <a href="https://wa.me/919876543210" class="whatsapp-button" target="_blank" rel="noopener noreferrer">💬</a>
+  <section class="section" id="quote">
+    <h2>Quote of the Day</h2>
+    <p class="testimonial">"Accounting is the language of business." – Warren Buffett</p>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">"The professionalism and insight offered by N.R. Kesharwani & Co. has been vital to our company’s growth." – Rajesh S.</div>
+    <div class="testimonial">"Prompt, accurate, and trustworthy. Highly recommended for tax and audit services!" – Sneha M.</div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <div style="text-align: center;">
+      <p>Email: <a href="mailto:nrkesharwani.ca@gmail.com">nrkesharwani.ca@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
+      <p>Address: 1st Floor, Business Plaza, Nagpur, India</p>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 N.R. Kesharwani & Co. | Designed with passion 💼 by Triveniram
+    &copy; 2025 N.R. Kesharwani & Co. | Designed by Triveniram
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const cards = document.querySelectorAll(".card");
-
-      cards.forEach((card, index) => {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(20px)";
-        setTimeout(() => {
-          card.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
-          card.style.opacity = "1";
-          card.style.transform = "translateY(0)";
-        }, index * 200);
-      });
-    });
-  </script>
 </body>
 </html>
