@@ -2,67 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pay for Our Services | N. R. Kesharwani & Co.</title>
+  <title>Pay Now | N. R. Kesharwani & Co.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f1fdf4;
-      padding: 50px;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f4fdf8;
       color: #333;
     }
-    .pay-btn {
-      padding: 15px 30px;
-      font-size: 18px;
+    header {
+      background: linear-gradient(to right, #004d40, #009688);
       color: white;
-      background-color: #28a745;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: 0.3s;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .pay-btn:hover {
-      background-color: #218838;
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    nav {
+      background-color: #00332e;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: fadeIn 1s ease-in;
+    }
+    h2 {
+      color: #00695c;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 18px;
+      background-color: #00796b;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      margin: 20px 0;
+    }
+    .cta-button:hover {
+      background-color: #004d40;
+    }
+    .testimonials {
+      background-color: #e0f2f1;
+      padding: 40px;
+      border-radius: 10px;
+      margin-top: 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .testimonial {
+      margin-bottom: 30px;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    .testimonial span {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 60px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h1>Pay for Our CA Services</h1>
-  <p>Secure online payments powered by Razorpay</p>
+  <header>
+    <h1>N. R. Kesharwani & Co.</h1>
+    <p>Secure Online Payments</p>
+  </header>
 
-  <button class="pay-btn" id="rzp-button1">Pay Now</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <!-- Razorpay Script -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script>
-    var options = {
-        "key": "rzp_test_yourapikeyhere", // Replace with your Key ID
-        "amount": "50000", // Amount in paise = ₹500.00
-        "currency": "INR",
-        "name": "N. R. Kesharwani & Co.",
-        "description": "Payment for CA Services",
-        "image": "https://assets.indiaonline.in/cat-default/450/chartered-accountants-ca-license-trade-and-business-license-agents.jpg",
-        "handler": function (response){
-            alert("Payment Successful! Payment ID: " + response.razorpay_payment_id);
-        },
-        "prefill": {
-            "name": "Client Name",
-            "email": "client@example.com",
-            "contact": "9999999999"
-        },
-        "theme": {
-            "color": "#28a745"
-        }
-    };
-    var rzp1 = new Razorpay(options);
-    document.getElementById('rzp-button1').onclick = function(e){
-        rzp1.open();
-        e.preventDefault();
-    }
-  </script>
+  <section>
+    <h2>Pay for Our Services</h2>
+    <p>Welcome to our secure payment page. You can now easily pay for the services you’ve booked with us. Just click the button below and proceed.</p>
+    <a href="#" class="cta-button">Pay Now via Razorpay</a>
+
+    <h2>Client Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Very professional and fast service! Their consultancy saved me a lot of taxes. Highly recommended!"</p>
+        <span>- Ankit Sharma</span>
+      </div>
+      <div class="testimonial">
+        <p>"I’m so happy I chose N. R. Kesharwani & Co. for my startup compliance. Everything was smooth and stress-free."</p>
+        <span>- Priya Jain</span>
+      </div>
+    </div>
+
+    <a href="book-us.html" class="cta-button">Contact Us Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 N. R. Kesharwani & Co. | Chartered Accountants
+  </footer>
 
 </body>
 </html>
